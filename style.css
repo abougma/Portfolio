@@ -82,6 +82,11 @@ a{
     font-size: 1.7rem;
     margin-bottom: 10px;
 }
+.section-2 ul{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
 
 .section-2 p{
     font-size: 1.1rem;
