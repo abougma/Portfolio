@@ -3,108 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="icon" href="fav.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Armel Bougma</title>
 </head>
 <body>
-    <header class="header">
+    <header class="hero">
         <div class="container">
-            <div class="profile">
-                <img src="IMG_0556.jpg" alt="Portrait d'Armel Bougma" class="profile-pic">
-                <div class="intro">
-                    <h1>Armel Bougma</h1>
-                    <p>Développeur Full-Stack | Lille, France</p>
-                    <ul class="social-links">
-                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="cv-armel.pdf" download><i class="fas fa-file-download"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/aboubakary-bougma/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/abougma" target="_blank"><i class="fab fa-github"></i></a></li>
-                    </ul>
+            <div class="hero-content">
+                <h1>Armel Bougma</h1>
+                <p>Développeur Full-Stack | Passionné par les technologies innovantes</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="cv-armel.pdf" download><i class="fas fa-file-download"></i></a>
+                    <a href="https://www.linkedin.com/in/aboubakary-bougma/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/abougma" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="container">
+    <main>
         <section class="about">
-            <h2>À propos</h2>
-            <p>
-                Bonjour et bienvenue sur mon portfolio ! Passionné par la création de solutions logicielles robustes, 
-                je m'efforce de transformer des idées en produits numériques innovants. 
-                Mes domaines de spécialisation incluent les systèmes backend, les bases de données et les API modernes.
-            </p>
-        </section>
-
-        <section class="experience">
-            <h2>Expériences professionnelles</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Développeur Fullstack - Transactis</h3>
-                    <p>2024-2026</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Chargé de projet numérique - Formasup-HDF</h3>
-                    <p>2023-2024</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Assistant Développeur Web - SIR</h3>
-                    <p>2022</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Développeur Web - Agence Emploi Jeunes</h3>
-                    <p>2021-2022</p>
-                </div>
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <p>
+                    Je suis un développeur full-stack basé à Lille, France. Mon objectif est de créer des solutions 
+                    logicielles innovantes et intuitives qui répondent aux besoins des utilisateurs. 
+                    Je suis passionné par le développement backend, la conception d'API et l'amélioration de la logique des projets.
+                </p>
             </div>
         </section>
 
         <section class="skills">
-            <h2>Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Front-End</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Back-End</h3>
-                    <p>PHP, Laravel, Node.js, Java, Python</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Bases de données</h3>
-                    <p>MySQL, PostgreSQL, MongoDB</p>
-                </div>
-                <div class="skill-category">
-                    <h3>UI/UX</h3>
-                    <p>Figma, Wireframing, Prototypage</p>
+            <div class="container">
+                <h2>Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Front-End</h3>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h3>Back-End</h3>
+                        <p>PHP, Laravel, Node.js, Java</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Bases de données</h3>
+                        <p>MySQL, PostgreSQL, MongoDB</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>UI/UX</h3>
+                        <p>Figma, Wireframing</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="projects">
-            <h2>Projets</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <h3>Génération et envoi de reçus de paiement</h3>
-                    <p>Système permettant de générer des reçus numériques et de les envoyer par email de manière sécurisée.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Système de signature dématérialisée</h3>
-                    <p>Outil complet pour la gestion de signatures électroniques avec une interface simple et intuitive.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Plateforme de rendez-vous en ligne</h3>
-                    <p>Application web facilitant la prise de rendez-vous avec des professionnels de divers domaines.</p>
+            <div class="container">
+                <h2>Projets</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Système de signature électronique</h3>
+                        <p>Outil permettant la signature dématérialisée des documents avec une interface utilisateur fluide.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Application de rendez-vous en ligne</h3>
+                        <p>Plateforme SaaS facilitant la prise de rendez-vous pour les professionnels et les clients.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Outil de gestion de reçus</h3>
+                        <p>Application pour générer et envoyer des reçus numériques par email.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="contact">
-            <h2>Contact</h2>
-            <p>Email : <a href="mailto:bougma125@gmail.com">bougma125@gmail.com</a></p>
-            <p>Téléphone : <a href="tel:0620679727">06 20 67 97 27</a></p>
+            <div class="container">
+                <h2>Contactez-moi</h2>
+                <p>Email : <a href="mailto:bougma125@gmail.com">bougma125@gmail.com</a></p>
+                <p>Téléphone : <a href="tel:0620679727">06 20 67 97 27</a></p>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Armel Bougma. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
