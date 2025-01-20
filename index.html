@@ -6,81 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="icon" href="fav.jpg" type="image/x-icon">
-
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-    <style>
-        .projects span {
-            display: inline-table;
-            margin-right: 60px; 
-        }
-    </style>
+    <title>Portfolio - Armel Bougma</title>
 </head>
 <body>
-        
-    <div class="grid-2">
-        <img src="IMG_0556.jpg" alt="Description de l'image">
-        <div class="section-1">
-            <i class="fas fa-code fa-5x white"></i>
-            <h2>Armel BOUGMA</h2>
-            <p>Lille, France.</p>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="cv-armel.pdf" download><i class="fa fa-file"></i></a>
-            <a href="https://www.linkedin.com/in/aboubakary-bougma/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/abougma"><i class="fab fa-github"></i></a>
-        </div>
-        <div class="section-2">
-            <h2>Apropos</h2>
-            <p>Bonjour et bienvenue sur mon portfolio !Développeur logiciel passionné par la création de solutions robustes et innovantes. Avec une solide expérience dans le développement back end, je me spécialise dans la conception et l'optimisation des systèmes,des interfaces attractifs, des bases de données et des APIs qui alimentent les applications web et mobiles. </p>
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Année:2024-2026 Développeur Fullstack Chez Transactis</strong></li>
-                <li><strong>Année: 2023-2024 Chargée de projet numérique Chez Formasup-hdf</strong></li>
-                <li><strong>Année: 2022-2022 Assistant développeur web Chez SIR</strong></li>
-                <li><strong>Année: 2021-2022 Développeur web Chez Agence Emploi Jeunes</strong></li>
+    <header class="header">
+        <img src="IMG_0556.jpg" alt="Portrait d'Armel Bougma" class="profile-pic">
+        <div class="intro">
+            <h1>Armel Bougma</h1>
+            <p>Développeur Full-Stack | Lille, France</p>
+            <ul class="social-links">
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="cv-armel.pdf" download><i class="fas fa-file-download"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/aboubakary-bougma/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/abougma" target="_blank"><i class="fab fa-github"></i></a></li>
             </ul>
-        
+        </div>
+    </header>
 
-            <h2>Front-End</h2>
-            <div class="skills">
+    <main>
+        <section class="about">
+            <h2>À propos</h2>
+            <p>
+                Bonjour et bienvenue sur mon portfolio ! Développeur logiciel passionné par la création de solutions robustes et innovantes. 
+                Je me spécialise dans la conception de systèmes, bases de données et APIs pour des applications web et mobiles.
+            </p>
+        </section>
+
+        <section class="experience">
+            <h2>Expériences professionnelles</h2>
+            <ul>
+                <li><strong>2024-2026 :</strong> Développeur Fullstack - Transactis</li>
+                <li><strong>2023-2024 :</strong> Chargé de projet numérique - Formasup-HDF</li>
+                <li><strong>2022 :</strong> Assistant Développeur Web - SIR</li>
+                <li><strong>2021-2022 :</strong> Développeur Web - Agence Emploi Jeunes</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Compétences</h2>
+            <div class="skills-category">
+                <h3>Front-End</h3>
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
                 <i class="fab fa-js"></i>
-                <i class="fab fa-laravel"></i>
-                <i class="fab fa-brands fa-github"></i>
-                <i class="fab fa-brands fa-windows"></i>
+                <i class="fab fa-react"></i>
             </div>
-            <h2>Back-End</h2>
-            <div class="skills">
-                <i class="fab fa-js"></i>
+            <div class="skills-category">
+                <h3>Back-End</h3>
                 <i class="fab fa-php"></i>
-                <i class="fab fa-python"></i>
-                <i class="fab fa-brands fa-node-js"></i>
+                <i class="fab fa-laravel"></i>
+                <i class="fab fa-node-js"></i>
                 <i class="fab fa-java"></i>
+                <i class="fab fa-python"></i>
             </div>
+            <div class="skills-category">
+                <h3>Bases de données</h3>
+                <i class="fas fa-database"></i>
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="skills-category">
+                <h3>UI/UX</h3>
+                <i class="fab fa-figma"></i>
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+        </section>
 
-            <h2>Base de données</h2>
-            <div class="skills">
-                <i class="fa fa-solid fa-database"></i>
+        <section class="projects">
+            <h2>Projets</h2>
+            <div class="project-list">
+                <a href="#" class="project-card">Génération et envoi de reçus de paiement par email</a>
+                <a href="#" class="project-card">Système de signature dématérialisée</a>
+                <a href="#" class="project-card">Plateforme de prise de rendez-vous en ligne</a>
             </div>
+        </section>
 
-            <h2>UI/UX Design</h2>
-            <div class="skills">
-                <i class="fab fa-solid fa-figma"></i>
-            </div>
-            
-            <h2>Projects</h2>
-            
-            <div class="projects">
-                <span><a href="https://www.google.fr/">Développement d'un système permettant de génerer des reçu de paiement par E-mail.</a></span>
-                <span><a href="https://www.google.fr/">Développement d'un système de signature dématérialisée.</a></span>
-                <span><a href="https://www.google.fr/">Développement d'un système de prise de rendez-vous.</a></span>
-            </div>
-            
+        <section class="contact">
             <h2>Contact</h2>
-            <a href="mailto:bougma125@gmail.com">bougma125@gmail.com</a>
-            <a href="tel:0620679727">0620679727</a>
-        </div>
-    </div>
+            <p>Email : <a href="mailto:bougma125@gmail.com">bougma125@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:0620679727">06 20 67 97 27</a></p>
+        </section>
+    </main>
 </body>
 </html>
