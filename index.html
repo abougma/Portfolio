@@ -9,6 +9,331 @@
     <link rel="icon" href="fav.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Armel Bougma</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background: #e0f7fa;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header */
+        .hero {
+            background: #00796b;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #004d40;
+        }
+
+        .hero .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffeb3b;
+        }
+
+        .hero .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero .social-icons a:hover {
+            color: #ffeb3b;
+            transform: scale(1.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #b2ebf2;
+            padding: 60px 20px;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+
+        .skill-card p {
+            font-size: 1.1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+
+        .project-card p {
+            font-size: 1.1rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #b2ebf2;
+            padding: 60px 20px;
+        }
+
+        .experience h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .experience-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .experience-card ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Education Section */
+        .education {
+            background: #b2ebf2;
+            padding: 60px 20px;
+        }
+
+        .education h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-icon {
+            background: #00796b;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin-right: 20px;
+        }
+
+        .education-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+
+        .education-content p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .education-content ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .education-content ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .education-content ul li:before {
+            content: "•";
+            color: #00796b;
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #004d40;
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p a {
+            color: #ffeb3b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact p a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #003530;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -35,7 +360,7 @@
             <div class="container">
                 <h2>À propos de moi</h2>
                 <p>
-                    Je suis un développeur full-stack passionné par la création de solutions logicielles innovantes. 
+                    Je suis un développeur full-stack passionné par la création de solutions logicielles innovantes.
                     Basé à Lille, France, je me spécialise dans la conception d'applications web et mobile, en mettant l'accent sur la performance et l'expérience utilisateur.
                     J'aime relever les défis techniques et participer à des projets ambitieux.
                 </p>
@@ -116,7 +441,7 @@
                         <p>Formasup-HDF, Villeneuve D'Ascq, France</p>
                         <p>Novembre 2023 - Septembre 2024</p>
                         <ul>
-                            <li> Développement d’une solution innovante d’émargement électronique avec 3 options : QR Code, Code à 5 chiffres, Envoi d'email.</li>
+                            <li>Développement d’une solution innovante d’émargement électronique avec 3 options : QR Code, Code à 5 chiffres, Envoi d'email.</li>
                             <li>Conception et déploiement d'une API REST robuste pour alimenter l'outil d'émargement électronique, assurant une intégration fluide et une scalabilité optimale.</li>
                             <li>Ajustement et optimisation d'une API REST existante pour améliorer les performances et la maintenabilité.</li>
                         </ul>
@@ -124,42 +449,43 @@
                 </div>
             </div>
         </section>
-<!-- Education Section -->
-<section class="education">
-    <div class="container">
-        <h2>Parcours Scolaire</h2>
-        <div class="education-timeline">
-            <div class="education-item">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="education-content">
-                    <h3>Master (Manager de projet logiciel, Mobile et IoT)</h3>
-                    <p>Junia - JuniaXP,Lille, France</p>
-                    <p><strong>2024 - 2026</strong></p>
-                    <ul>
-                        <li>Spécialisation en développement web et mobile.</li>
-                        <li>Projet de fin d'études sur les applications décentralisées et l'IoT.</li>
-                    </ul>
+
+        <!-- Education Section -->
+        <section class="education">
+            <div class="container">
+                <h2>Parcours Scolaire</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Master (Manager de projet logiciel, Mobile et IoT)</h3>
+                            <p>Junia - JuniaXP, Lille, France</p>
+                            <p><strong>2024 - 2026</strong></p>
+                            <ul>
+                                <li>Spécialisation en développement web et mobile.</li>
+                                <li>Projet de fin d'études sur les applications décentralisées et l'IoT.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Bachelor en Informatique</h3>
+                            <p>Junia - JuniaXP, Lille, France</p>
+                            <p><strong>2023 - 2023</strong></p>
+                            <ul>
+                                <li>Formation approfondie en algorithmie, programmation et systèmes informatiques.</li>
+                                <li>Participation à des projets collaboratifs en équipe.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="education-item">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="education-content">
-                    <h3>Bachelor en Informatique</h3>
-                    <p>Junia - JuniaXP,Lille, France</p>
-                    <p><strong>2023 - 2023</strong></p>
-                    <ul>
-                        <li>Formation approfondie en algorithmie, programmation et systèmes informatiques.</li>
-                        <li>Participation à des projets collaboratifs en équipe.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Contact Section -->
         <section class="contact">
@@ -177,292 +503,3 @@
     </footer>
 </body>
 </html>
-
-<style>
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background: #f8f8f8;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Header */
-.hero {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-}
-
-.hero .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid #fff;
-}
-
-.hero .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.hero .social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.hero .social-icons a:hover {
-    color: #2d2d2d;
-}
-
-/* About Section */
-.about {
-    padding: 60px 20px;
-    background: #fff;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-/* Skills Section */
-.skills {
-    background: #f9f9f9;
-    padding: 60px 20px;
-}
-
-.skills h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.skill-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    font-size: 1.1rem;
-}
-
-/* Projects Section */
-.projects {
-    padding: 60px 20px;
-    background: #fff;
-}
-
-.projects h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1.1rem;
-}
-
-/* Experience Section */
-.experience {
-    background: #f9f9f9;
-    padding: 60px 20px;
-}
-
-.experience h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.experience-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.experience-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.experience-card ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.experience-card ul li {
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-.contact {
-    background: #333;
-    color: #fff;
-    padding: 60px 20px;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contact p a {
-    color: #61dafb;
-    text-decoration: none;
-}
-
-.contact p a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-    /* Education Section */
-.education {
-    background: #f9f9f9;
-    padding: 60px 20px;
-}
-
-.education h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.education-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.education-item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.education-item:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.education-icon {
-    background: #61dafb;
-    color: #fff;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 2rem;
-    margin-right: 20px;
-}
-
-.education-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.education-content p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #666;
-}
-
-.education-content ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.education-content ul li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.education-content ul li:before {
-    content: "•";
-    color: #61dafb;
-    margin-right: 10px;
-}
-</style>
