@@ -35,9 +35,9 @@
             <div class="container">
                 <h2>À propos de moi</h2>
                 <p>
-                    Je suis un développeur full-stack basé à Lille, France. Mon objectif est de créer des solutions
-                    logicielles innovantes et intuitives qui répondent aux besoins des utilisateurs.
-                    Je suis passionné par le développement backend, la conception d'API et l'amélioration de la logique des projets.
+                    Je suis un développeur full-stack passionné par la création de solutions logicielles innovantes. 
+                    Basé à Lille, France, je me spécialise dans la conception d'applications web et mobile, en mettant l'accent sur la performance et l'expérience utilisateur.
+                    J'aime relever les défis techniques et participer à des projets ambitieux.
                 </p>
             </div>
         </section>
@@ -50,7 +50,7 @@
                     <div class="skill-card">
                         <i class="fas fa-code"></i>
                         <h3>Front-End</h3>
-                        <p>HTML, CSS, JavaScript, React</p>
+                        <p>HTML, CSS, JavaScript, React, Vue.js</p>
                     </div>
                     <div class="skill-card">
                         <i class="fas fa-server"></i>
@@ -65,7 +65,7 @@
                     <div class="skill-card">
                         <i class="fas fa-pencil-ruler"></i>
                         <h3>UI/UX</h3>
-                        <p>Figma, Wireframing</p>
+                        <p>Figma, Wireframing, Prototypage</p>
                     </div>
                 </div>
             </div>
@@ -78,23 +78,19 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>Système de signature électronique</h3>
-                        <p>Outil permettant la signature dématérialisée des documents avec une interface utilisateur fluide.</p>
+                        <p>Outil permettant la signature dématérialisée des documents avec une interface utilisateur fluide et sécurisée.</p>
                     </div>
                     <div class="project-card">
                         <h3>Application de rendez-vous en ligne</h3>
-                        <p>Plateforme SaaS facilitant la prise de rendez-vous pour les professionnels et les clients.</p>
+                        <p>Plateforme SaaS permettant aux clients de prendre rendez-vous facilement avec des professionnels de santé ou autres.</p>
                     </div>
                     <div class="project-card">
                         <h3>Outil de gestion de reçus</h3>
-                        <p>Application pour générer et envoyer des reçus numériques par email.</p>
+                        <p>Application pour générer, gérer et envoyer des reçus numériques par email avec une interface intuitive.</p>
                     </div>
                     <div class="project-card">
                         <h3>Système de Gestion Locative</h3>
-                        <p>
-                            Application innovante permettant la gestion complète des locations immobilières.
-                            Générez et envoyez des reçus numériques par email, suivez les paiements, et gérez les contrats de location de manière efficace.
-                            Conçue pour simplifier les processus administratifs et améliorer l'expérience des propriétaires et des locataires.
-                        </p>
+                        <p>Application permettant aux propriétaires de gérer leurs locations immobilières de manière simple et efficace.</p>
                     </div>
                 </div>
             </div>
@@ -110,9 +106,9 @@
                         <p>Entreprise XYZ, Lille, France</p>
                         <p>Janvier 2022 - Présent</p>
                         <ul>
-                            <li>Développement et maintenance d'applications web.</li>
-                            <li>Collaboration avec l'équipe pour améliorer les processus de développement.</li>
-                            <li>Participation à des projets agiles.</li>
+                            <li>Développement d'applications web performantes en utilisant Laravel et React.</li>
+                            <li>Amélioration continue des processus de développement dans un environnement agile.</li>
+                            <li>Création d'API robustes et optimisées pour diverses fonctionnalités.</li>
                         </ul>
                     </div>
                     <div class="experience-card">
@@ -120,9 +116,9 @@
                         <p>Entreprise ABC, Paris, France</p>
                         <p>Juin 2020 - Décembre 2021</p>
                         <ul>
-                            <li>Assistance dans le développement de nouvelles fonctionnalités.</li>
-                            <li>Participation aux tests et au débogage.</li>
-                            <li>Apprentissage des meilleures pratiques de codage.</li>
+                            <li>Développement de nouvelles fonctionnalités pour une application de gestion interne.</li>
+                            <li>Réalisation de tests unitaires et de débogage pour améliorer la performance.</li>
+                            <li>Collaboration avec l'équipe sur des projets de développement web en suivant les meilleures pratiques.</li>
                         </ul>
                     </div>
                 </div>
@@ -148,8 +144,8 @@
                         <p>Université de Paris, France</p>
                         <p>2016 - 2019</p>
                         <ul>
-                            <li>Cours de base en programmation et en bases de données.</li>
-                            <li>Participation à des projets collaboratifs.</li>
+                            <li>Base solide en programmation, algorithmie et systèmes informatiques.</li>
+                            <li>Participation à des projets collaboratifs en équipe.</li>
                         </ul>
                     </div>
                 </div>
@@ -162,12 +158,6 @@
                 <h2>Contactez-moi</h2>
                 <p>Email : <a href="mailto:bougma125@gmail.com">bougma125@gmail.com</a></p>
                 <p>Téléphone : <a href="tel:+33620679727">06 20 67 97 27</a></p>
-                <form action="submit_form.php" method="POST">
-                    <input type="text" name="name" placeholder="Votre nom" required>
-                    <input type="email" name="email" placeholder="Votre email" required>
-                    <textarea name="message" placeholder="Votre message" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
             </div>
         </section>
     </main>
@@ -179,8 +169,9 @@
 </body>
 </html>
 
-/* Reset and General Styles */
-body, h1, h2, p, a, input, textarea {
+<style>
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -189,35 +180,216 @@ body, h1, h2, p, a, input, textarea {
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    background: #f4f4f4;
     color: #333;
-    background: linear-gradient(to right, #141e30, #243b55);
 }
 
-/* Additional Styles for Animations and Forms */
-input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #61dafb;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff8c00;
-}
-
-/* Contact Section Styling */
-.contact form {
-    max-width: 600px;
+.container {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
+
+/* Header */
+.hero {
+    background: #222;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+.hero .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.hero .social-icons a:hover {
+    color: #61dafb;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+/* Skills Section */
+.skills {
+    background: #333;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: #61dafb;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #61dafb;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #61dafb;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Experience Section */
+.experience {
+    background: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.experience-card ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background: #333;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.contact p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+</style>
