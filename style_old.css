@@ -1,0 +1,41 @@
+body, h1, h2, p, a, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+/* Additional Styles for Animations and Forms */
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #61dafb;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+/* Contact Section Styling */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
