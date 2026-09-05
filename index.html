@@ -3,6 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Armel Bougma — Développeur Full-Stack junior à Lille, en recherche active d'un CDI. Applications web et mobile, APIs REST, bases de données, IoT. Disponible immédiatement.">
+    <meta name="author" content="Armel Bougma">
+    <meta name="keywords" content="developpeur full-stack, CDI, Lille, React, Laravel, Vue.js, Node.js, developpement web, developpement mobile, IoT">
+    <meta name="theme-color" content="#0f0f0f">
+    <!-- Open Graph (partage LinkedIn / réseaux) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Armel Bougma — Développeur Full-Stack (recherche CDI)">
+    <meta property="og:description" content="Développeur Full-Stack junior à Lille — web, mobile, IoT. En recherche active d'un CDI.">
+    <meta property="og:url" content="https://abougma.github.io/">
+    <meta property="og:image" content="https://abougma.github.io/ImgP.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <!-- Données structurées (Schema.org / Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Armel Bougma",
+      "givenName": "Armel",
+      "familyName": "Bougma",
+      "jobTitle": "Développeur Full-Stack",
+      "description": "Développeur Full-Stack junior en recherche active d'un CDI (Lille, France). Web, mobile, IoT.",
+      "url": "https://abougma.github.io/",
+      "email": "mailto:bougma125@gmail.com",
+      "telephone": "+33620679727",
+      "address": { "@type": "PostalAddress", "addressLocality": "Lille", "addressCountry": "FR" },
+      "sameAs": [
+        "https://github.com/abougma",
+        "https://www.linkedin.com/in/aboubakary-bougma/"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Junia — JuniaXP" }
+      ],
+      "worksFor": { "@type": "Organization", "name": "Transactis" },
+      "knowsAbout": [
+        "React", "Vue.js", "JavaScript", "TypeScript", "PHP", "Laravel",
+        "Node.js", "MySQL", "PostgreSQL", "MongoDB", "Docker", "IoT"
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,6 +79,10 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="availability-badge" role="status">
+                        <span class="availability-dot" aria-hidden="true"></span>
+                        <span>Disponible pour un CDI - Lille &amp; Remote</span>
+                    </div>
                     <h1 class="hero-title">
                         <span class="gradient-text">Armel Bougma</span>
                     </h1>
@@ -45,10 +90,11 @@
                     <p class="hero-description">
                         Passionné par la création de solutions numériques innovantes et performantes.
                         Je transforme vos idées en applications web et mobile exceptionnelles.
+                        <strong>Actuellement en recherche active d'un CDI</strong> en développement web, mobile et IoT.
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                        <a href="CV-BOUGMA.pdf" download class="btn btn-secondary">
+                        <a href="CV-BOUGMA-JS.pdf" download class="btn btn-secondary">
                             <i class="fas fa-download"></i> Télécharger CV
                         </a>
                     </div>
@@ -90,9 +136,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-description">
-                        Je suis un développeur full-stack Junior passionné basé à <strong>Lille, France</strong>. 
-                        Avec une expertise en développement web et mobile, je me spécialise dans la création 
-                        d'applications performantes et d'expériences utilisateur exceptionnelles.
+                        Je suis un développeur full-stack Junior passionné basé à <strong>Lille, France</strong>, <strong>en recherche active d'un CDI</strong>. Avec une expertise en développement web et mobile (y compris IoT), je me spécialise dans la création d'applications performantes et d'expériences utilisateur exceptionnelles.
                     </p>
                     <p class="about-description">
                         J'aime relever les défis techniques complexes et contribuer à des projets innovants 
@@ -272,9 +316,6 @@
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Voir le projet">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                                 <a href="https://github.com/abougma/Signature" class="project-link" aria-label="Code source">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -294,7 +335,6 @@
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">ViteJS</span>
                             <span class="tech-tag">QR Code</span>
-                            <span class="tech-tag">Jira</span>
                         </div>
                     </div>
                 </div>
@@ -303,9 +343,6 @@
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Voir le projet">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                                 <a href="https://github.com/abougma/E-rdv" class="project-link" aria-label="Code source">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -324,7 +361,6 @@
                             <span class="tech-tag">Laravel</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">Stripe</span>
-                            <span class="tech-tag">Jira</span>
                         </div>
                     </div>
                 </div>
@@ -333,9 +369,6 @@
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Voir le projet">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                                 <a href="https://github.com/abougma/MyTicket" class="project-link" aria-label="Code source">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -354,7 +387,6 @@
                             <span class="tech-tag">Express</span>
                             <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">PDF.js</span>
-                            <span class="tech-tag">Jira</span>
                         </div>
                     </div>
                 </div>
@@ -384,7 +416,6 @@
                             <span class="tech-tag">PHP</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Jira</span>
                         </div>
                     </div>
                 </div>
@@ -393,9 +424,6 @@
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Voir le projet">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                                 <a href="https://github.com/abougma/Express-colis" class="project-link" aria-label="Code source">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -414,7 +442,6 @@
                             <span class="tech-tag">Next.js</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">WebSocket</span>
-                            <span class="tech-tag">Jira</span>
                         </div>
                     </div>
                 </div>
@@ -423,9 +450,6 @@
                     <div class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="Voir le projet">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
                                 <a href="https://github.com/JuniaXP-JS/armel.bougma" class="project-link" aria-label="Code source">
                                     <i class="fab fa-github"></i>
                                 </a>
@@ -446,7 +470,6 @@
                             <span class="tech-tag">WebSocket</span>
                             <span class="tech-tag">Server TCP</span>
                             <span class="tech-tag">PlateformeIO</span>
-                            <span class="tech-tag">Notion</span>
                         </div>
                     </div>
                 </div>
@@ -596,7 +619,7 @@
                 <span class="section-tag">Contact</span>
                 <h2 class="section-title">Travaillons ensemble</h2>
                 <p class="section-subtitle">
-                    Vous avez un projet en tête ? Discutons de la façon dont je peux vous aider à le concrétiser.
+                    Vous recrutez un développeur motivé en CDI (Lille &amp; Remote), ou vous avez un projet en tête ? Discutons de la façon dont je peux contribuer à votre équipe dès le premier jour.
                 </p>
             </div>
             <div class="contact-content">
@@ -647,16 +670,16 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" aria-label="Votre nom" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                            <input type="email" id="email" name="email" placeholder="Votre email" aria-label="Votre email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet" aria-label="Sujet" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Votre message" aria-label="Votre message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
@@ -673,7 +696,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2025 Armel Bougma. Tous droits réservés.</p>
+                    <p>&copy; <span id="footer-year">2026</span> Armel Bougma. Tous droits réservés.</p>
                     <p>Conçu et développé avec ❤️ à Lille</p>
                 </div>
                 <div class="footer-links">

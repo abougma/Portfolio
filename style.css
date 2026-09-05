@@ -225,6 +225,36 @@ body {
     align-items: center;
 }
 
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.45);
+    color: #34d399;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+}
+
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+    animation: availability-pulse 2s infinite;
+}
+
+@keyframes availability-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+    70%  { box-shadow: 0 0 0 9px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -994,6 +1024,19 @@ body {
 /* ==================================
    RESPONSIVE DESIGN
    ================================== */
+
+/* Accessibilité : réduire les animations pour les utilisateurs sensibles */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;

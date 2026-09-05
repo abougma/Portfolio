@@ -2,6 +2,9 @@
 // SMOOTH SCROLLING & NAVIGATION
 // ==================================
 
+// Respect reduced-motion preferences (accessibility)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -9,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
-                behavior: 'smooth',
+                behavior: prefersReducedMotion ? 'auto' : 'smooth',
                 block: 'start'
             });
         }
@@ -69,15 +72,19 @@ function typeWriter(element, text, speed = 100) {
 // Initialize typing animation when hero section is visible
 const heroSubtitle = document.querySelector('.hero-subtitle');
 if (heroSubtitle) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                typeWriter(heroSubtitle, 'Développeur Full-Stack', 150);
-                observer.unobserve(entry.target);
-            }
+    if (prefersReducedMotion) {
+        heroSubtitle.textContent = 'Développeur Full-Stack';
+    } else {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeWriter(heroSubtitle, 'Développeur Full-Stack', 150);
+                    observer.unobserve(entry.target);
+                }
+            });
         });
-    });
-    observer.observe(heroSubtitle);
+        observer.observe(heroSubtitle);
+    }
 }
 
 // ==================================
@@ -101,9 +108,11 @@ const fadeInObserver = new IntersectionObserver((entries) => {
 
 // Apply fade in animation to various elements
 document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-card, .about-stats .stat').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
+    if (!prefersReducedMotion) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+    }
     fadeInObserver.observe(el);
 });
 
@@ -159,10 +168,14 @@ const statsObserver = new IntersectionObserver((entries) => {
                 const text = stat.textContent;
                 const number = parseInt(text);
                 if (!isNaN(number)) {
-                    stat.textContent = '0+';
-                    setTimeout(() => {
-                        animateCounter(stat, number);
-                    }, 500);
+                    if (prefersReducedMotion) {
+                        stat.textContent = number + '+';
+                    } else {
+                        stat.textContent = '0+';
+                        setTimeout(() => {
+                            animateCounter(stat, number);
+                        }, 500);
+                    }
                 }
             });
             statsObserver.unobserve(entry.target);
@@ -199,29 +212,21 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-        submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
-            // Show success message
-            showNotification('Message envoyé avec succès! Je vous répondrai bientôt.', 'success');
-            
-            // Reset form
-            this.reset();
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+
+        // Récupérer les données du formulaire
+        const data = Object.fromEntries(new FormData(this).entries());
+
+        // Construire un mailto pré-rempli (aucune donnée HTTP envoyée ailleurs)
+        const subject = encodeURIComponent('[Portfolio] ' + (data.subject || 'Contact') + ' - ' + data.name);
+        const body = encodeURIComponent(
+            'Bonjour Armel,\n\n' +
+            (data.message || '') +
+            '\n\n- ' + data.name + ' (' + data.email + ')'
+        );
+        window.location.href = 'mailto:bougma125@gmail.com?subject=' + subject + '&body=' + body;
+
+        showNotification('Ouverture de votre messagerie... Votre message sera envoyé depuis votre boîte mail.', 'info');
+        this.reset();
     });
 }
 
@@ -288,21 +293,6 @@ function showNotification(message, type = 'info') {
 }
 
 // ==================================
-// PARALLAX EFFECT
-// ==================================
-
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    
-    // Apply parallax to hero background
-    const heroBackground = document.querySelector('.hero::before');
-    if (heroBackground) {
-        document.querySelector('.hero').style.backgroundPosition = `center ${rate}px`;
-    }
-});
-
-// ==================================
 // LAZY LOADING IMAGES
 // ==================================
 
@@ -318,9 +308,11 @@ const imageObserver = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll('img').forEach(img => {
-    img.style.opacity = '0';
-    img.style.transform = 'scale(1.1)';
-    img.style.transition = 'all 0.6s ease';
+    if (!prefersReducedMotion) {
+        img.style.opacity = '0';
+        img.style.transform = 'scale(1.1)';
+        img.style.transition = 'all 0.6s ease';
+    }
     imageObserver.observe(img);
 });
 
@@ -329,7 +321,7 @@ document.querySelectorAll('img').forEach(img => {
 // ==================================
 
 // Create custom cursor for desktop
-if (window.innerWidth > 768) {
+if (window.innerWidth > 768 && !prefersReducedMotion) {
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     Object.assign(cursor.style, {
@@ -446,5 +438,14 @@ document.querySelectorAll('a, button, input, textarea').forEach(el => {
         this.style.outline = 'none';
     });
 });
+
+// ==================================
+// ANNÉE DYNAMIQUE DU FOOTER
+// ==================================
+
+const footerYear = document.getElementById('footer-year');
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
 
 console.log('🚀 Portfolio loaded successfully!');
